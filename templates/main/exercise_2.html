@@ -1,0 +1,36 @@
+{% block exercise_2 %}
+<div class="col-5 mx-5 exercise">
+    <h3>Задание 2.</h3>
+    <p>
+        Бинарный поиск.
+    </p>
+    <p class="note">
+        Примечание: <br>
+        Будет случайно генерироваться 4 списка профессий при помощи библиотеки Faker.
+        Вам остается лишь выбрать сортировку и ввести какую-нибудь профессию для проверки
+        на нахождения его в итоговом 5-ом списке.
+    </p>
+    <hr>
+    <form action="/ex_2" method="post">
+        <p>Выберите вид сортировки:</p>
+        <div class="d-flex flex-column ">
+            <label class="custom-radio">
+                <input type="radio" name="sort_ex_2_radio" value="sort_asc">
+                <span>Сортировка по возрастанию</span>
+            </label>
+            <label class="custom-radio">
+                <input type="radio" name="sort_ex_2_radio" value="sort_desc">
+                <span>Сортировка по убыванию</span>
+            </label>
+        </div>
+        <hr>
+        <span>Введите профессию для бинарного поиска:</span> <br>
+        <div class="d-grid mt-2">
+            <input type="text" name="binary_search" placeholder="Введите профессию">
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button class="submit mt-3" type="submit">Отправить</button>
+        </div>
+    </form>
+</div> 
+{% endblock %}

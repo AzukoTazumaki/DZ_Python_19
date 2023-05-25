@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+{% block header %}
+{% include 'main/header.html' %}
+{% endblock %}
+
+{% block welcome %}
+{% include 'main/welcome.html' %}
+{% endblock %}
+
+<div class="container-fluid exercises" data-bs-spy="scroll" data-bs-target="#welcome" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="row d-flex align-items-center vh-100" id="exercise">
+
+        {% block exercise_1 %}
+        {% include 'main/exercise_1.html' %}
+        {% endblock %}
+
+        {% block exercise_2 %}
+        {% include 'main/exercise_2.html' %}
+        {% endblock %}
+
+    </div>
+</div>
+
+{% endblock %}

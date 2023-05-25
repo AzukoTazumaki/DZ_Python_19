@@ -1,0 +1,38 @@
+{% block exercise_1 %}
+
+<div class="offset-1 col-5 exercise">
+    <h3>Задание 1.</h3>
+    <p>
+        Линейный поиск.
+    </p>
+    <p class="note">
+        Примечание: <br>
+        Будет случайно генерироваться 4 списка имен при помощи библиотеки Faker.
+        Вам остается лишь выбрать сортировку и ввести какое-нибудь имя для проверки
+        на нахождения его в итоговом 5-ом списке.
+    </p>
+    <hr>
+    <form action="/ex_1" method="post">
+        <p>Выберите вид сортировки:</p>
+        <div class="d-flex flex-column ">
+            <label class="custom-radio">
+                <input type="radio" name="sort_ex_1_radio" value="sort_asc">
+                <span>Сортировка по возрастанию</span>
+            </label>
+            <label class="custom-radio">
+                <input type="radio" name="sort_ex_1_radio" value="sort_desc">
+                <span>Сортировка по убыванию</span>
+            </label>
+        </div>
+        <hr>
+        <span>Введите имя для линейного поиска:</span> <br>
+        <div class="d-grid mt-2">
+            <input type="text" name="linear_search" placeholder="Введите имя">
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button class="submit mt-3" type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
